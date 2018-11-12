@@ -1,6 +1,6 @@
 ---
 galaxy_info:
-  description: Installs and configures MongoDB shell and mongodb tools 4.0
+  description: Installs and configures MongoDB shell and mongodb tools 3.2
   company: Traveloka
   platforms:
   - name: Ubuntu
