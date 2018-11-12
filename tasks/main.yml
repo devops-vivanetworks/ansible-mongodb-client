@@ -1,0 +1,26 @@
+---
+
+- block:
+    - name: add mongodb key
+      apt_key:
+        keyserver: keyserver.ubuntu.com
+        id: EA312927
+        state: present
+
+    - name: add mongodb repository for v3.2.x
+      apt_repository:
+        repo: 'deb http://repo.mongodb.org/apt/{{ ansible_distribution|lower }} {{ ansible_distribution_release }}/mongodb-org/3.2 multiverse'
+        state: present
+
+    - name: install mongodb packages
+      apt:
+        name: "{{ item }}"
+        state: present
+        update_cache: yes
+        cache_valid_time: "{{ apt_cache_valid_time | default(omit) }}"
+      with_items: "{{ mongodb_packages }}"
+
+  become: true
+  become_method: sudo
+  tags:
+    - mongodb-3.2

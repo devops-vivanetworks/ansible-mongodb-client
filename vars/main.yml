@@ -1,0 +1,5 @@
+---
+
+mongodb_packages:
+  - "mongodb-org-shell={{ mongodb_version }}"
+  - "mongodb-org-tools={{ mongodb_version }}"

@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  description: Installs and configures MongoDB shell and mongodb tools 3.2
+  company: Traveloka
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+  categories:
+  - database
+  - database:nosql
+dependencies: []
