@@ -17,7 +17,6 @@
         name: "{{ item }}"
         state: present
         update_cache: yes
-        allow_unauthenticated: yes
         cache_valid_time: "{{ apt_cache_valid_time | default(omit) }}"
       with_items: "{{ mongodb_packages }}"
 
