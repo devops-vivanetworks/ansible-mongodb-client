@@ -3,7 +3,7 @@
 - block:
     - name: add mongodb key
       apt_key:
-        keyserver: keyserver.ubuntu.com
+        keyserver: "hkp://keyserver.ubuntu.com:80"
         id: EA312927
         state: present
 
